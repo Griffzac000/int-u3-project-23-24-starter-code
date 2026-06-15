@@ -24,6 +24,7 @@ const rewardMusic = document.getElementById('reward-music');
 const deathMusic = document.getElementById('death-music');
 const fearMusic = document.getElementById('fear-music');
 const happyMusic = document.getElementById('happy-music');
+let startOverBtns = document.querySelectorAll('.startOver');
 
 document.querySelector('.opening').addEventListener('click', function(){
     if(event.target !== userBtn){
@@ -95,4 +96,16 @@ optionTwoFinBtn.addEventListener('click', function(){
     fearMusic.pause();
     fearMusic.currentTime = 0;
     happyMusic.play();
+});
+
+startOverBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+        optionOneEn.style.display = 'none';
+        optionOneEnd.style.display = 'none';
+        optionTwoEn.style.display = 'none';
+        optionTwoEnd.style.display = 'none';
+        opening.style.display = 'block';
+        userBtn.style.display = 'inline-block';
+        location.reload();
+    });
 });
