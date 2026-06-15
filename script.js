@@ -22,13 +22,14 @@ const pathMusic = document.getElementById('path-music');
 const actionMusic = document.getElementById('action-music');
 const rewardMusic = document.getElementById('reward-music');
 const deathMusic = document.getElementById('death-music');
-const fearMusic = document.getElementById('fear-music')
+const fearMusic = document.getElementById('fear-music');
+const happyMusic = document.getElementById('happy-music');
+
 document.querySelector('.opening').addEventListener('click', function(){
     if(event.target !== userBtn){
         thunder.play();
     }
 });
-
 
 userBtn.addEventListener('click', function(){
     const userData = inputElement.value;
@@ -90,7 +91,8 @@ optionOneFinBtn.addEventListener('click', function(){
 optionTwoFinBtn.addEventListener('click', function(){
     optionTwoScreen.style.display = 'none';
     optionTwoEn.style.display = 'block';
-    body.style.backgroundImage = "url('https://www.worldanvil.com/uploads/images/91ef3b86a30d831e4a0409bdb1280af0.gif')";
+    body.style.backgroundImage = "url('https://wallpapers-clan.com/wp-content/uploads/2025/05/ghibli-cottage-in-flower-field-desktop-wallpaper-preview.jpg')";
     fearMusic.pause();
     fearMusic.currentTime = 0;
+    happyMusic.play();
 });
